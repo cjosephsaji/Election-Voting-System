@@ -1,0 +1,28 @@
+{% extends 'core.html' %}
+{% block content %}
+<form method="POST" class="election-form">
+	{% csrf_token %}
+	<span class="border border-{{button_color}} student-details">
+		<p id="admission-number">{{student_details.admission_number}}</p>
+		<p id="name">{{student_details.student_name}}</p>
+		<p id="house" color='red'>{{student_details.house}} HOUSE</p>
+	</span>
+	<div class="positions-container">
+	    {% for each_position, candidates in candidate_details.items %}
+	    <div class="each-position-container">
+	        <p id="position">{{ each_position }}</p>
+	        <div class="candidates-container">
+		        {% for candidate in candidates %}
+		        <input type="radio" class="btn-check" name="options-outlined-{{each_position}}" id="success-outlined-{{ forloop.parentloop.counter }}-{{ forloop.counter }}" autocomplete="off" value="{{candidate}}" required>
+		        <label class="btn btn-outline-{{button_color}}" for="success-outlined-{{ forloop.parentloop.counter }}-{{ forloop.counter }}">{{ candidate }} </label>
+		        {% endfor %}
+	        </div>
+	    </div>
+	    {% endfor %}
+	</div>
+  	<div class="submit-container" style="font-size: 1em;margin-top: 20em;">
+	    <button type="submit" class="btn btn-{{button_color}} submit-button">Submit</button>
+	</div>
+</form>
+{% endblock %}
+

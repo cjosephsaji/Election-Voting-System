@@ -1,0 +1,21 @@
+{% extends 'core.html' %}
+{% block content %}
+<div style="text-align: center;margin-top: 5em;font-size: 3em;">
+	<p>Thank you for your vote {{student_details.student_name}}</p>
+</div>
+<div style="text-align: center;margin-top: 5em;font-size: 1em;">
+	<p>This page will automatically redirect in <span id="countdown" style="margin-right: 0.3em;">10</span>seconds</p>
+</div>
+    <script>
+        var countdownNumber = 10;
+        var countdownElement = document.getElementById("countdown");
+        var countdownInterval = setInterval(function() {
+            countdownNumber--;
+            countdownElement.textContent = countdownNumber;
+            if (countdownNumber <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = "{% url 'admission-number-page' %}";
+            }
+        }, 1000);
+    </script>
+{% endblock %}

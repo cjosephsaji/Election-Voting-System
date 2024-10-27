@@ -1,0 +1,90 @@
+body {
+	margin: 3em;
+	font-family: "Freeman", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+header p {
+	padding-left: 1em;
+	font-size: 2em;
+}
+input {
+	margin-top: 2em;
+	color: black;
+	padding:3em;
+}
+.form-control {
+	padding: 25px 12px;
+	font-size: 22px;
+}
+.login-form {
+	margin-top: 10em;
+	display: flex;
+	flex-direction: column;
+}
+
+.submit-container {
+	margin-top: 5em;
+	display: flex;
+	justify-content: center;
+
+}
+.submit-container button {
+	font-size: 3em;
+}	
+
+#error-message {
+	color: red;
+	text-align: center;
+	font-size: 2em;
+}
+
+.election-form {
+	margin-top: 3em;
+}
+
+.positions-container {
+	display: flex;
+}
+.student-details {
+	display: flex;
+	justify-content: space-around;
+	color: #4e4e4e;
+	font-size: 2em;
+	border: 3px solid black;
+	padding: 1.5em;
+}
+
+#position {
+	font-size: 2em;
+	margin-top: 0em;
+	text-decoration:underline;
+	text-align: center;
+
+}
+.each-position-container {
+	border: 1px solid black;
+	padding: 1.5em;
+}
+
+.candidates-container {
+	display: flex;
+	flex-direction: column;
+}
+.candidates-container label {
+	margin-top: 1.5em;
+	font-size: 1em;
+}
+
+.error-404 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 5em;
+}
